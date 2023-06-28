@@ -1,8 +1,7 @@
 import { Box, Checkbox, FormControlLabel, FormGroup, ImageList, ImageListItem, Switch } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
-const RightBody = () => {
-  const [mode, setmode] = useState("light");
+const RightBody = ({ mode, setMode }) => {
   return (
     <Box flex={1} p={2}>
       <FormGroup>
@@ -10,7 +9,7 @@ const RightBody = () => {
         <FormControlLabel disabled control={<Checkbox />} label="disabled" />
       </FormGroup>
       <FormGroup>
-        <FormControlLabel control={<Switch onChange={() => setmode(mode === "light" ? "dark" : "light")} />} label={mode} />
+        <FormControlLabel control={<Switch onChange={() => setMode(mode === "light" ? "dark" : "light")} />} label={mode} />
       </FormGroup>
       <ImageList sx={{ width: "100%", height: 330 }} cols={2} rowHeight={164}>
         {itemData.map((item) => (
