@@ -7,7 +7,6 @@ import RightBody from "./components/RightBody";
 import Footer from "./components/Footer";
 import Create from "./components/Create";
 import { useState } from "react";
-import { theme } from "./theme";
 
 function App() {
   const [mode, setMode] = useState("light");
