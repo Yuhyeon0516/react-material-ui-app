@@ -4,6 +4,7 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
+import { blue, green, red } from "@mui/material/colors";
 
 function App() {
   return (
@@ -48,9 +49,26 @@ function App() {
 
       <Button color="secondary">Theme Button</Button>
       <CustomThemeButton>Custeom Theme Button</CustomThemeButton>
+      <Root>
+        <Typography>down(md): red</Typography>
+        <Typography>up(md): blue</Typography>
+        <Typography>up(lg): green</Typography>
+      </Root>
     </div>
   );
 }
+
+const Root = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    backgroundColor: red[500],
+  },
+  [theme.breakpoints.up("md")]: {
+    backgroundColor: blue[500],
+  },
+  [theme.breakpoints.up("lg")]: {
+    backgroundColor: green[500],
+  },
+}));
 
 const CustomThemeButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
