@@ -19,9 +19,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "gh-pages -d deploy",
+    "predeploy": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://Yuhyeon0516.github.io/react-material-ui-app",
   "eslintConfig": {
     "extends": [
       "react-app",
